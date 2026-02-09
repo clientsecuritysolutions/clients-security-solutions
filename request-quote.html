@@ -3,36 +3,46 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Request a Quote | Clients Security Solutions LLC</title>
-  <meta name="description" content="Request a consultation and estimate for security services in DFW. Text preferred for fastest scheduling." />
+  <title>Request Coverage | Clients Security Solutions LLC</title>
+  <meta name="description" content="Request security coverage in DFW. Appointment-based. Text preferred for fastest response." />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
+
   <div class="topbar">
     <div class="container topbar-inner">
-      <div class="topbar-left"><span class="pill">By Appointment Only</span><span class="muted">Dallas–Fort Worth</span></div>
-      <div class="topbar-right"><a class="toplink" href="sms:+19039003480">Text Preferred: (903) 900-3480</a></div>
+      <div class="topbar-left">
+        <span class="pill">By Appointment Only</span>
+        <span class="muted">Dallas–Fort Worth Security Services</span>
+      </div>
+      <div class="topbar-right">
+        <a class="toplink" href="sms:+19039003480">Text Preferred: (903) 900-3480</a>
+        <span class="sep">•</span>
+        <a class="toplink" href="mailto:horacegreen64@icloud.com">horacegreen64@icloud.com</a>
+      </div>
     </div>
   </div>
 
   <header class="header">
     <div class="container header-inner">
       <a class="brand" href="index.html">
-        <img class="logo" src="assets/img/Black White Simple Modern Neon Griddy Bold Technology Pixel Electronics Store Logo.png" alt="Clients Security Solutions LLC logo" />
+        <img class="logo"
+          src="asset/img/Black%20White%20Simple%20Modern%20Neon%20Griddy%20Bold%20Technology%20Pixel%20Electronics%20Store%20Logo.png"
+          alt="Clients Security Solutions LLC logo" />
         <div class="brand-text">
           <div class="brand-name">Clients Security Solutions LLC</div>
           <div class="brand-sub">DFW Private Security • Professional Protection</div>
         </div>
       </a>
 
-      <nav class="nav">
+      <nav class="nav" aria-label="Primary navigation">
         <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">Menu</button>
         <div class="nav-links" id="navLinks">
           <a href="index.html">Home</a>
           <a href="services.html">Services</a>
           <a href="industries.html">Industries</a>
-          <a class="active" href="request-quote.html">Request a Quote</a>
-          <a href="about.html">About</a>
+          <a class="active" href="request-quote.html">Request Coverage</a>
+          <a href="about.html">Founder</a>
           <a href="contact.html">Contact</a>
         </div>
       </nav>
@@ -42,18 +52,21 @@
   <main>
     <section class="page-hero">
       <div class="container">
-        <h1>Request a Consultation / Estimate</h1>
-        <p class="muted">Complete the form and it will open a prepared email to send directly to Horace Green. Text is preferred for fastest response.</p>
+        <h1>Request Coverage</h1>
+        <p class="muted">
+          Fill this out to generate a prepared email. Text is preferred for the quickest response.
+        </p>
       </div>
     </section>
 
     <section class="section">
       <div class="container grid-2">
+
         <div class="panel">
-          <h2 class="h3">Text Preferred</h2>
-          <p class="muted">For fastest scheduling, text your service type, date/time, and location.</p>
+          <h3>Fastest Option</h3>
+          <p class="muted">Text your service type, date, hours, and location for a quick reply.</p>
           <a class="btn btn-full" href="sms:+19039003480">Text (903) 900-3480</a>
-          <p class="small muted">Email is also available: <a href="mailto:horacegreen64@icloud.com">horacegreen64@icloud.com</a></p>
+          <p class="small muted">Email: <a href="mailto:horacegreen64@icloud.com">horacegreen64@icloud.com</a></p>
         </div>
 
         <form class="form" id="quoteForm">
@@ -61,10 +74,12 @@
             <label for="name">Full Name</label>
             <input id="name" required placeholder="Your name" />
           </div>
+
           <div class="form-row">
             <label for="phone">Phone Number</label>
             <input id="phone" required placeholder="Best number to reach you" />
           </div>
+
           <div class="form-row">
             <label for="service">Service Needed</label>
             <select id="service" required>
@@ -72,7 +87,7 @@
               <option>Temporary Construction Site Security</option>
               <option>Shopping Center Foot Patrol</option>
               <option>Private Events Security</option>
-              <option>Executive Protection (Level 4)</option>
+              <option>Executive Protection Support (Level 4)</option>
               <option>PPO Private Transport Support</option>
               <option>Custom Coverage / Other</option>
             </select>
@@ -91,17 +106,18 @@
 
           <div class="form-row">
             <label for="location">Location (City/Area)</label>
-            <input id="location" required placeholder="Dallas, Fort Worth, etc." />
+            <input id="location" required placeholder="Dallas, Fort Worth, Arlington..." />
           </div>
 
           <div class="form-row">
             <label for="details">Details</label>
-            <textarea id="details" rows="5" required placeholder="Describe your site/event, any concerns, and preferred contact time."></textarea>
+            <textarea id="details" rows="5" required placeholder="Describe the assignment and any concerns."></textarea>
           </div>
 
-          <button class="btn btn-full" type="submit">Send Request</button>
-          <p class="small muted">This opens your email app with the message pre-filled.</p>
+          <button class="btn btn-full" type="submit">Open Email to Send</button>
+          <p class="small muted">Works on GitHub Pages (opens your email app with everything filled in).</p>
         </form>
+
       </div>
     </section>
   </main>
