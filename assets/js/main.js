@@ -6,6 +6,7 @@ if (navToggle && navLinks) {
     const open = navLinks.classList.toggle("show");
     navToggle.setAttribute("aria-expanded", String(open));
   });
+
   navLinks.querySelectorAll("a").forEach(a => {
     a.addEventListener("click", () => {
       navLinks.classList.remove("show");
@@ -17,7 +18,6 @@ if (navToggle && navLinks) {
 const year = document.getElementById("year");
 if (year) year.textContent = String(new Date().getFullYear());
 
-// Quote form (works on GitHub Pages via mailto)
 const quoteForm = document.getElementById("quoteForm");
 if (quoteForm) {
   quoteForm.addEventListener("submit", (e) => {
@@ -32,9 +32,9 @@ if (quoteForm) {
     const location = document.getElementById("location").value.trim();
     const details = document.getElementById("details").value.trim();
 
-    const subject = encodeURIComponent(`Consultation Request: ${service} (${location})`);
+    const subject = encodeURIComponent(`Coverage Request: ${service} (${location})`);
     const body = encodeURIComponent(
-`Clients Security Solutions LLC — New Consultation Request
+`Clients Security Solutions LLC — New Coverage Request
 
 Name: ${name}
 Phone: ${phone}
