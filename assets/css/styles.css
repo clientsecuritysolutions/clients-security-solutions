@@ -111,9 +111,7 @@ a{color:inherit;text-decoration:none}
 }
 .btn:hover{transform: translateY(-1px)}
 .btn:active{transform: translateY(0)}
-.btn-ghost{
-  background:rgba(255,255,255,.05);
-}
+.btn-ghost{background:rgba(255,255,255,.05)}
 .btn-full{width:100%}
 .btn-small{padding:10px 12px;border-radius:12px}
 
