@@ -6,50 +6,18 @@ if (navToggle && navLinks) {
     const open = navLinks.classList.toggle("show");
     navToggle.setAttribute("aria-expanded", String(open));
   });
-
-  navLinks.querySelectorAll("a").forEach(a => {
-    a.addEventListener("click", () => {
-      navLinks.classList.remove("show");
-      navToggle.setAttribute("aria-expanded", "false");
-    });
-  });
 }
 
 const year = document.getElementById("year");
 if (year) year.textContent = String(new Date().getFullYear());
 
-const quoteForm = document.getElementById("quoteForm");
-if (quoteForm) {
-  quoteForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const to = "horacegreen64@icloud.com";
-
-    const name = document.getElementById("name").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const service = document.getElementById("service").value;
-    const date = document.getElementById("date").value;
-    const hours = document.getElementById("hours").value.trim();
-    const location = document.getElementById("location").value.trim();
-    const details = document.getElementById("details").value.trim();
-
-    const subject = encodeURIComponent(`Coverage Request: ${service} (${location})`);
-    const body = encodeURIComponent(
-`Clients Security Solutions LLC — New Coverage Request
-
-Name: ${name}
-Phone: ${phone}
-
-Service Needed: ${service}
-Requested Date: ${date}
-Hours Needed: ${hours}
-Location: ${location}
-
-Details:
-${details}
-
-Text preferred: (903) 900-3480`
-    );
-
-    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+const revealEls = document.querySelectorAll(".reveal");
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add("show");
+      io.unobserve(e.target);
+    }
   });
-}
+},{threshold:0.12});
+revealEls.forEach(el=>io.observe(el));
