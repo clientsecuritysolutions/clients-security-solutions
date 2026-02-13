@@ -11,12 +11,12 @@
 
   <div class="topbar">
     <div class="container topbar-inner">
-      <div>
+      <div class="topbar-left">
         <span class="pill">By Appointment Only</span>
         <span class="muted">Dallas–Fort Worth Security Services</span>
       </div>
-      <div>
-        <a class="toplink" href="sms:+19039003480">Text Preferred: (903) 900-3480</a>
+      <div class="topbar-right">
+        <a class="toplink" href="sms:+19039003480">(903) 900-3480</a>
         <span class="sep">•</span>
         <a class="toplink" href="mailto:horacegreen64@icloud.com">horacegreen64@icloud.com</a>
       </div>
@@ -26,53 +26,108 @@
   <header class="header">
     <div class="container header-inner">
       <a class="brand" href="index.html">
-        <!-- LOGO -->
         <img class="logo"
-          src="assets/img/Black%20White%20Simple%20Modern%20Neon%20Griddy%20Bold%20Technology%20Pixel%20Electronics%20Store%20Logo.png"
+          src="asset/img/Black%20White%20Simple%20Modern%20Neon%20Griddy%20Bold%20Technology%20Pixel%20Electronics%20Store%20Logo.png"
           alt="Clients Security Solutions LLC logo" />
-        <div>
+        <div class="brand-text">
           <div class="brand-name">Clients Security Solutions LLC</div>
           <div class="brand-sub">DFW Private Security • Professional Protection</div>
         </div>
       </a>
 
-      <nav class="nav">
-        <button class="nav-toggle" id="navToggle">Menu</button>
+      <nav class="nav" aria-label="Primary navigation">
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">Menu</button>
         <div class="nav-links" id="navLinks">
           <a class="active" href="index.html">Home</a>
-          <a href="#">Services</a>
-          <a href="#">Industries</a>
-          <a class="btn btn-small" href="sms:+19039003480">Text (Preferred)</a>
+          <a href="services.html">Services</a>
+          <a href="industries.html">Industries</a>
+          <a href="request-quote.html">Request Coverage</a>
+          <a href="about.html">Founder</a>
+          <a href="contact.html">Contact</a>
         </div>
       </nav>
     </div>
   </header>
 
-  <main class="container hero">
-    <h1>Professional Security Services in Dallas–Fort Worth</h1>
-    <p class="lead">
-      Clients Security Solutions LLC provides reliable, appointment-based security coverage across DFW.
-      Whether you need construction site security, shopping center foot patrol, or private event coverage,
-      every engagement begins with a pre-consultation and clear estimate.
-    </p>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <h1>Professional Security Services in Dallas–Fort Worth</h1>
+          <p class="lead">
+            Clients Security Solutions LLC provides reliable, appointment-based coverage across DFW.
+            Construction sites, shopping center foot patrol, private events, executive protection support,
+            and secure transport support—each engagement begins with a pre-consultation and clear estimate.
+          </p>
 
-    <div class="hero-actions">
-      <a class="btn" href="sms:+19039003480">Request Coverage</a>
-      <a class="btn btn-ghost" href="sms:+19039003480">Text (Preferred)</a>
-    </div>
+          <div class="hero-actions">
+            <a class="btn" href="request-quote.html">Request Coverage</a>
+            <a class="btn btn-ghost" href="sms:+19039003480">Text Now</a>
+          </div>
+
+          <div class="grid-3">
+            <div class="panel reveal">
+              <h3>Construction Sites</h3>
+              <p class="muted">Temporary contracts and site coverage with consistent communication.</p>
+            </div>
+            <div class="panel reveal">
+              <h3>Foot Patrol</h3>
+              <p class="muted">Shopping center patrol presence with professional public interaction.</p>
+            </div>
+            <div class="panel reveal">
+              <h3>Private Events</h3>
+              <p class="muted">Planned coverage to maintain a controlled, respectful environment.</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card glow reveal">
+          <div class="card-title">Quick Details</div>
+          <div class="card-row"><span>Service Area</span><span class="muted">Dallas / Fort Worth (DFW)</span></div>
+          <div class="card-row"><span>Scheduling</span><span class="muted">Appointment Only</span></div>
+          <div class="card-row"><span>Phone</span><a class="toplink" href="tel:+19039003480">(903) 900-3480</a></div>
+          <div class="card-row"><span>Email</span><a class="toplink" href="mailto:horacegreen64@icloud.com">horacegreen64@icloud.com</a></div>
+          <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn btn-full" href="request-quote.html">Request Coverage</a>
+            <a class="btn btn-ghost btn-full" href="sms:+19039003480">Text Now</a>
+          </div>
+          <p class="small muted" style="margin:10px 0 0">Pre-consultations help confirm scope, schedule, and estimate.</p>
+        </aside>
+      </div>
+    </section>
 
     <section class="section alt">
-      <h2>Founder</h2>
-      <img
-        src="assets/img/IMG_7987.jpeg"
-        alt="Founder Horace Green"
-        style="width:100%;max-width:320px;border-radius:16px;border:1px solid #333;" />
-      <p class="muted">
-        Led by Founder Horace Green, a Level 4 licensed security professional with 36+ years of experience and
-        Dallas Baptist University Police Academy training.
-      </p>
+      <div class="container split">
+        <div class="reveal">
+          <h2>Founder-Led Security</h2>
+          <p class="muted">
+            Led by Founder Horace Green, Clients Security Solutions LLC brings 36+ years of security experience
+            and law enforcement academy training. Level 4 licensed, qualified for executive protection support,
+            and known for a calm, reliable, respectful approach.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="about.html">Meet the Founder</a>
+            <a class="btn btn-ghost" href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <div class="portrait reveal">
+          <img src="img/IMG_7987.jpeg" alt="Founder Horace Green" />
+          <div class="portrait-cap">
+            <div class="cap-title">Horace Green</div>
+            <div class="cap-sub">Founder • Level 4 Licensed • 36+ Years Experience</div>
+          </div>
+        </div>
+      </div>
     </section>
+
   </main>
+
+  <footer class="footer">
+    <div class="container footer-bottom muted">
+      © <span id="year"></span> Clients Security Solutions LLC. All rights reserved.
+    </div>
+  </footer>
 
   <script src="assets/js/main.js"></script>
 </body>
