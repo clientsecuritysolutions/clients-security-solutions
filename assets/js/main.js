@@ -1,4 +1,4 @@
-// ===== Mobile Menu Toggle =====
+// Mobile nav toggle
 const navToggle = document.getElementById("navToggle");
 const navLinks = document.getElementById("navLinks");
 
@@ -8,17 +8,20 @@ if (navToggle && navLinks) {
     navToggle.setAttribute("aria-expanded", String(open));
   });
 
-  // Close menu after clicking a link (mobile)
+  // Close menu when clicking a link (mobile)
   navLinks.querySelectorAll("a").forEach(a => {
-    a.addEventListener("click", () => navLinks.classList.remove("show"));
+    a.addEventListener("click", () => {
+      navLinks.classList.remove("show");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
   });
 }
 
-// ===== Year =====
+// Footer year
 const year = document.getElementById("year");
 if (year) year.textContent = String(new Date().getFullYear());
 
-// ===== Scroll Reveal Animations =====
+// Reveal animations
 const revealEls = document.querySelectorAll(".reveal");
 if (revealEls.length) {
   const io = new IntersectionObserver((entries)=>{
@@ -32,7 +35,7 @@ if (revealEls.length) {
   revealEls.forEach(el=>io.observe(el));
 }
 
-// ===== Request Quote: Open Email with Form Details =====
+// Request Coverage form -> opens email client with prefilled email (works on GitHub Pages)
 const quoteForm = document.getElementById("quoteForm");
 if (quoteForm) {
   quoteForm.addEventListener("submit", (e) => {
@@ -46,14 +49,14 @@ if (quoteForm) {
     const location = document.getElementById("location")?.value?.trim() || "";
     const details = document.getElementById("details")?.value?.trim() || "";
 
-    const subject = encodeURIComponent("Security Coverage Request — Clients Security Solutions LLC");
-    const body = encodeURIComponent(
-`Hello Horace,
+    const to = "horacegreen64@icloud.com";
+    const subject = `Security Coverage Request — ${service || "Inquiry"}`;
+    const body =
+`Hello Clients Security Solutions LLC,
 
-I would like to request security coverage.
-
-Name: ${name}
+My name is ${name}.
 Phone: ${phone}
+
 Service Needed: ${service}
 Requested Date: ${date}
 Hours Needed: ${hours}
@@ -63,9 +66,9 @@ Details:
 ${details}
 
 Thank you,
-${name}`
-    );
+${name}`.trim();
 
-    window.location.href = `mailto:horacegreen64@icloud.com?subject=${subject}&body=${body}`;
+    const mailto = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
   });
 }
