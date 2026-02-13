@@ -9,125 +9,114 @@
 </head>
 <body>
 
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <div class="topbar-left">
-        <span class="pill">By Appointment Only</span>
-        <span class="muted">Dallas–Fort Worth Security Services</span>
-      </div>
-      <div class="topbar-right">
-        <a class="toplink" href="sms:+19039003480">Text Preferred: (903) 900-3480</a>
-        <span class="sep">•</span>
-        <a class="toplink" href="mailto:horacegreen64@icloud.com">horacegreen64@icloud.com</a>
-      </div>
-    </div>
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div><span class="pill">By Appointment Only</span> <span class="muted">Dallas–Fort Worth</span></div>
+    <div><a href="sms:+19039003480">Text: (903) 900-3480</a> • <a href="mailto:horacegreen64@icloud.com">horacegreen64@icloud.com</a></div>
   </div>
+</div>
 
-  <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <img class="logo"
-          src="asset/img/Black%20White%20Simple%20Modern%20Neon%20Griddy%20Bold%20Technology%20Pixel%20Electronics%20Store%20Logo.png"
-          alt="Clients Security Solutions LLC logo" />
-        <div class="brand-text">
-          <div class="brand-name">Clients Security Solutions LLC</div>
-          <div class="brand-sub">DFW Private Security • Professional Protection</div>
-        </div>
-      </a>
-
-      <nav class="nav" aria-label="Primary navigation">
-        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">Menu</button>
-        <div class="nav-links" id="navLinks">
-          <a href="index.html">Home</a>
-          <a href="services.html">Services</a>
-          <a href="industries.html">Industries</a>
-          <a class="active" href="request-quote.html">Request Coverage</a>
-          <a href="about.html">Founder</a>
-          <a href="contact.html">Contact</a>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <h1>Request Coverage</h1>
-        <p class="muted">
-          Fill this out to generate a prepared email. Text is preferred for the quickest response.
-        </p>
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img class="logo" src="black%20white%20simple%20modern%20neon%20griddy%20bold%20technology%20pixel%20electronics%20store%20logo.png" alt="Clients Security Solutions LLC logo" />
+      <div class="brand-text">
+        <div class="brand-name">Clients Security Solutions LLC</div>
+        <div class="brand-sub">DFW Private Security • Professional Protection</div>
       </div>
-    </section>
+    </a>
 
-    <section class="section">
-      <div class="container grid-2">
+    <nav class="nav">
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">Menu</button>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="industries.html">Industries</a>
+        <a href="about.html">Founder</a>
+        <a href="contact.html">Contact</a>
+        <a class="active btn btn-small" href="request-quote.html">Request Coverage</a>
+      </div>
+    </nav>
+  </div>
+</header>
 
-        <div class="panel">
-          <h3>Fastest Option</h3>
-          <p class="muted">Text your service type, date, hours, and location for a quick reply.</p>
-          <a class="btn btn-full" href="sms:+19039003480">Text (903) 900-3480</a>
-          <p class="small muted">Email: <a href="mailto:horacegreen64@icloud.com">horacegreen64@icloud.com</a></p>
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="reveal">Request Coverage</h1>
+      <p class="muted reveal">Fill this out and we’ll generate a prepared email to send. (Works on GitHub Pages.)</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid-2">
+
+      <div class="panel reveal">
+        <h3>Fastest Option</h3>
+        <p class="muted">Text your service type, date, hours, and location for a quick reply.</p>
+        <a class="btn btn-full" href="sms:+19039003480">Text (903) 900-3480</a>
+        <p class="small muted" style="margin-top:10px;">Email: <a href="mailto:horacegreen64@icloud.com">horacegreen64@icloud.com</a></p>
+      </div>
+
+      <form class="form reveal" id="quoteForm">
+        <div class="form-row">
+          <label for="name">Full Name</label>
+          <input id="name" required placeholder="Your name" />
         </div>
 
-        <form class="form" id="quoteForm">
-          <div class="form-row">
-            <label for="name">Full Name</label>
-            <input id="name" required placeholder="Your name" />
+        <div class="form-row">
+          <label for="phone">Phone Number</label>
+          <input id="phone" required placeholder="Best number to reach you" />
+        </div>
+
+        <div class="form-row">
+          <label for="service">Service Needed</label>
+          <select id="service" required>
+            <option value="" disabled selected>Select a service</option>
+            <option>Temporary Construction Site Security</option>
+            <option>Shopping Center Foot Patrol</option>
+            <option>Private Events Security</option>
+            <option>Executive Protection Support (Level 4)</option>
+            <option>PPO Private Transport Support</option>
+            <option>Custom Coverage / Other</option>
+          </select>
+        </div>
+
+        <div class="form-row two">
+          <div>
+            <label for="date">Requested Date</label>
+            <input id="date" type="date" required />
           </div>
-
-          <div class="form-row">
-            <label for="phone">Phone Number</label>
-            <input id="phone" required placeholder="Best number to reach you" />
+          <div>
+            <label for="hours">Hours Needed</label>
+            <input id="hours" required placeholder="Example: 8 hours" />
           </div>
+        </div>
 
-          <div class="form-row">
-            <label for="service">Service Needed</label>
-            <select id="service" required>
-              <option value="" disabled selected>Select a service</option>
-              <option>Temporary Construction Site Security</option>
-              <option>Shopping Center Foot Patrol</option>
-              <option>Private Events Security</option>
-              <option>Executive Protection Support (Level 4)</option>
-              <option>PPO Private Transport Support</option>
-              <option>Custom Coverage / Other</option>
-            </select>
-          </div>
+        <div class="form-row">
+          <label for="location">Location (City/Area)</label>
+          <input id="location" required placeholder="Dallas, Fort Worth, Arlington..." />
+        </div>
 
-          <div class="form-row two">
-            <div>
-              <label for="date">Requested Date</label>
-              <input id="date" type="date" required />
-            </div>
-            <div>
-              <label for="hours">Hours Needed</label>
-              <input id="hours" required placeholder="Example: 8 hours" />
-            </div>
-          </div>
+        <div class="form-row">
+          <label for="details">Details</label>
+          <textarea id="details" rows="5" required placeholder="Describe the assignment and any concerns."></textarea>
+        </div>
 
-          <div class="form-row">
-            <label for="location">Location (City/Area)</label>
-            <input id="location" required placeholder="Dallas, Fort Worth, Arlington..." />
-          </div>
+        <button class="btn btn-full" type="submit">Open Email to Send</button>
+        <p class="small muted">This opens your email app with everything filled in.</p>
+      </form>
 
-          <div class="form-row">
-            <label for="details">Details</label>
-            <textarea id="details" rows="5" required placeholder="Describe the assignment and any concerns."></textarea>
-          </div>
-
-          <button class="btn btn-full" type="submit">Open Email to Send</button>
-          <p class="small muted">Works on GitHub Pages (opens your email app with everything filled in).</p>
-        </form>
-
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-bottom muted">
-      © <span id="year"></span> Clients Security Solutions LLC. All rights reserved.
     </div>
-  </footer>
+  </section>
+</main>
 
-  <script src="assets/js/main.js"></script>
+<footer class="footer">
+  <div class="container footer-bottom muted">
+    © <span id="year"></span> Clients Security Solutions LLC. All rights reserved.
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>
