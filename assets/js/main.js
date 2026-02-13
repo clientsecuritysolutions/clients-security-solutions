@@ -6,11 +6,22 @@ if (navToggle && navLinks) {
     const open = navLinks.classList.toggle("show");
     navToggle.setAttribute("aria-expanded", String(open));
   });
+
+  // Close menu after clicking a link (mobile UX)
+  navLinks.querySelectorAll("a").forEach(a=>{
+    a.addEventListener("click", ()=>{
+      if(navLinks.classList.contains("show")){
+        navLinks.classList.remove("show");
+        navToggle.setAttribute("aria-expanded","false");
+      }
+    });
+  });
 }
 
 const year = document.getElementById("year");
 if (year) year.textContent = String(new Date().getFullYear());
 
+// Reveal animations
 const revealEls = document.querySelectorAll(".reveal");
 const io = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
